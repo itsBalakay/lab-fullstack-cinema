@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import { Link, Switch, Route } from "react-router-dom";
 import Movies from "./components/Movies";
 import SingleMovies from "./components/SingleMovies";
+import NewMovies from "./components/NewMovies";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           path="/movie/:id"
           render={(props) => <SingleMovies {...props} />}
         />
+        <Route exact path="/newmovie" render={(props) => <NewMovies />} />
       </Switch>
     </div>
   );
